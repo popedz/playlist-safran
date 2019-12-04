@@ -1,0 +1,11 @@
+<p>songs works!</p>
+
+<input type="text" [(ngModel)]="newSong">
+<button (click)="searchSong()">Search</button>
+
+<ul class="songs">
+    <li *ngFor="let song of songs">
+        <a href={{song.url}} target="_blank">{{song.name}}</a>
+        <span> Artist: <i>{{song.artist}}</i></span>
+    </li>
+</ul>
